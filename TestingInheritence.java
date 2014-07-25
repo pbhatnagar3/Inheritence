@@ -1,3 +1,9 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+
+
 /**
  * 
  * @author pbhatnagar
@@ -8,7 +14,7 @@ public class TestingInheritence {
 	public static void main(String[] args){
 		/*
 		 * For the following, the Dog object will be created but first the constructor of Animal will be called and then the constructor of Dog
-		 * will be called. Both of the constructors will not be taking any arguements
+		 * will be called. Both of the constructors will not be taking any arguments
 		 */
 		Dog dojo = new Dog();
 		System.out.println("**************");
@@ -39,6 +45,19 @@ public class TestingInheritence {
 		 * In the following, the printID() of the animal got overwritten :P
 		 */
 		yo.printID();
+		
+		//randomly using some of the space to practice writing a iterator
+		
+		final List<String> list =  new LinkedList<String>();
+		list.add("what is your name?");
+		list.add("hi, my name is Pujun ");
+		System.out.println("*********##############*************");
+		Iterator<String> iter = list.iterator();
+		while(iter.hasNext()){
+			System.out.println(iter.next());
+		}
+		
+		
 	}
 	
 }
